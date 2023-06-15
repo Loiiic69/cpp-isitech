@@ -8,11 +8,17 @@ private:
 
 public:
     Boxeur(const std::string& _nom, float _poids) : nom(_nom), poids(_poids) {
-        std::cout << "Participant : " << nom << std::endl;
+        std::cout << "------------------------------------" << std::endl;
+        std::cout << "------------------------------------" << std::endl;
+        std::cout << "    Participant : " << nom << std::endl;
+        std::cout << "------------------------------------" << std::endl;
+        std::cout << "------------------------------------" << std::endl;
+        std::cout << "" << std::endl;
+
+
     }
 
     ~Boxeur() {
-        std::cout << "Destructeur Boxeur : " << nom << std::endl;
     }
 
     std::string getNom() const {
@@ -37,11 +43,12 @@ private:
 
 public:
     Combat(const std::string& _niveau) : niveau(_niveau), coinBleu(nullptr), coinRouge(nullptr), vainqueur(nullptr) {
-        std::cout << "Constructeur Combat : " << niveau << std::endl;
+        std::cout << "------------------------------------" << std::endl;
+        std::cout << "------------------------------------" << std::endl;
+        std::cout << "" << std::endl;
     }
 
     ~Combat() {
-        std::cout << "Destructeur Combat : " << niveau << std::endl;
     }
 
     std::string getNiveau() const {
@@ -92,10 +99,18 @@ void afficheResultats(Combat* combats[], int taille) {
 
         if (coinRouge != nullptr) {
             std::cout << "Coin rouge : " << coinRouge->getNom() << std::endl;
+            std::cout << "" << std::endl;
+            std::cout << "------------------------------------" << std::endl;
+            std::cout << "------------------------------------" << std::endl;
+            std::cout << "" << std::endl;
+
         }
 
         if (vainqueur != nullptr) {
-            std::cout << "Vainqueur : " << vainqueur->getNom() << std::endl;
+            std::cout << "     VAINQUEUR : " << vainqueur->getNom() << std::endl;
+            std::cout << "" << std::endl;
+            std::cout << "------------------------------------" << std::endl;
+            std::cout << "------------------------------------" << std::endl;
         }
 
         std::cout << std::endl;
